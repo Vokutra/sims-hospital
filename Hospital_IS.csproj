@@ -1,0 +1,109 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Roboto-Italic.ttf" />
+    <None Remove="Fonts\Roboto-Light.ttf" />
+    <None Remove="Fonts\Roboto-Medium.ttf" />
+    <None Remove="Fonts\Roboto-Regular.ttf" />
+    <None Remove="Resources\bell.png" />
+    <None Remove="Resources\brush.png" />
+    <None Remove="Resources\calendar.png" />
+    <None Remove="Resources\check.png" />
+    <None Remove="Resources\conference-48.png" />
+    <None Remove="Resources\copy.png" />
+    <None Remove="Resources\globe.png" />
+    <None Remove="Resources\goldBell.png" />
+    <None Remove="Resources\house-48.png" />
+    <None Remove="Resources\info.png" />
+    <None Remove="Resources\logout.png" />
+    <None Remove="Resources\LogoZdravoBolnica.png" />
+    <None Remove="Resources\mail.png" />
+    <None Remove="Resources\make_appointment.png" />
+    <None Remove="Resources\medicaments.png" />
+    <None Remove="Resources\notepad.png" />
+    <None Remove="Resources\notifications.png" />
+    <None Remove="Resources\patients.png" />
+    <None Remove="Resources\planner-48.png" />
+    <None Remove="Resources\scheduled-appointments.png" />
+    <None Remove="Resources\search-3-48.png" />
+    <None Remove="Resources\telephone.png" />
+    <None Remove="Resources\user.png" />
+    <None Remove="Resources\x-mark.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.3.0" />
+    <PackageReference Include="LiveCharts" Version="0.9.7" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="JSONData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Fonts\Roboto-Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\Roboto-Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\Roboto-Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\Roboto-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\bell.png" />
+    <Resource Include="Resources\brush.png" />
+    <Resource Include="Resources\calendar.png" />
+    <Resource Include="Resources\check.png" />
+    <Resource Include="Resources\conference-48.png" />
+    <Resource Include="Resources\copy.png" />
+    <Resource Include="Resources\globe.png" />
+    <Resource Include="Resources\goldBell.png" />
+    <Resource Include="Resources\house-48.png" />
+    <Resource Include="Resources\info.png" />
+    <Resource Include="Resources\logout.png" />
+    <Resource Include="Resources\LogoZdravoBolnica.png" />
+    <Resource Include="Resources\mail.png" />
+    <Resource Include="Resources\make_appointment.png" />
+    <Resource Include="Resources\medicaments.png" />
+    <Resource Include="Resources\notepad.png" />
+    <Resource Include="Resources\notifications.png" />
+    <Resource Include="Resources\patients.png" />
+    <Resource Include="Resources\planner-48.png" />
+    <Resource Include="Resources\scheduled-appointments.png" />
+    <Resource Include="Resources\search-3-48.png" />
+    <Resource Include="Resources\telephone.png" />
+    <Resource Include="Resources\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
